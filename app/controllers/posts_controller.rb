@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = @post.author #this is so the partial form can render correctly
   end
 
   def new
